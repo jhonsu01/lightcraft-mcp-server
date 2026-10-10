@@ -44,3 +44,4 @@ package-lock.json
 *.avif
 *.dng
 *.xmp
+*.zip

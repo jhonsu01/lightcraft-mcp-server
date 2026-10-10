@@ -1,6 +1,6 @@
 {
   "name": "lightcraft-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for LightCraft: develop photos and raw files (auto tone, white balance, 114 sliders, presets, profiles, masks, spot healing, crop), merge HDR and panoramas, cull by sharpness and export JPEG, PNG, TIFF, WebP, AVIF and DNG with LightCraft's own engine, from Claude (Windows, macOS, Linux).",
   "type": "module",
   "main": "dist/index.js",
@@ -15,7 +15,8 @@
     "start": "node dist/index.js",
     "test": "vitest run",
     "test:e2e": "node scripts/e2e.mjs",
-    "pack:mcpb": "npm run build && npx -y @anthropic-ai/mcpb pack . lightcraft-mcp-server.mcpb"
+    "pack:mcpb": "npm run build && npx -y @anthropic-ai/mcpb pack . lightcraft-mcp-server.mcpb",
+    "pack:codex": "npm run build && node scripts/pack-codex.mjs"
   },
   "keywords": [
     "mcp",
@@ -56,5 +57,15 @@
     "esbuild": "^0.28.2",
     "typescript": "^5.9.3",
     "vitest": "^5.0.3"
+  },
+  "codex": {
+    "shortDescription": "Develop photos and raw files with your local LightCraft",
+    "category": "Design",
+    "brandColor": "#F59E0B",
+    "defaultPrompt": [
+      "Auto-tone every raw photo in this folder and export JPEGs",
+      "Merge these bracketed shots into an HDR and export a TIFF",
+      "Give these portraits a warm black-and-white look"
+    ]
   }
 }
