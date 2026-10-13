@@ -1,6 +1,6 @@
 {
   "name": "lightcraft-mcp-server",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "MCP server for LightCraft: develop photos and raw files (auto tone, white balance, 114 sliders, presets, profiles, masks, spot healing, crop), merge HDR and panoramas, cull by sharpness and export JPEG, PNG, TIFF, WebP, AVIF and DNG with LightCraft's own engine, from Claude (Windows, macOS, Linux).",
   "type": "module",
   "main": "dist/index.js",
