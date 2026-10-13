@@ -152,7 +152,7 @@ claude mcp add lightcraft -- node "$PWD/dist/bundle.cjs"
 ```bash
 npm run build       # TypeScript + single-file bundle (dist/bundle.cjs)
 npm test            # unit tests (Windows, macOS and Linux path logic)
-npm run test:e2e    # 23 end-to-end checks over real MCP stdio (synthetic images and DNGs)
+npm run test:e2e    # 24 end-to-end checks over real MCP stdio (synthetic images and DNGs)
 npm run pack:mcpb   # lightcraft-mcp-server.mcpb
 npm run pack:codex  # Codex plugin zip
 ```

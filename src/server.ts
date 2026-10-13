@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { registerAdvancedTools } from './tools/advanced.js';
 import { registerDevelopTools } from './tools/develop.js';
+import { LINK_INSTRUCTIONS } from './links.js';
 
 /** serverInfo.version comes from package.json (reachable as ../package.json from dist/ and src/). */
 export function readPackageVersion(): string {
@@ -28,7 +29,9 @@ export function createServer(): McpServer {
         'and export to JPEG, PNG, TIFF, WebP, AVIF and DNG, for one photo or whole folders. Positions (crop rects, mask points, spots) ' +
         'are normalized 0..1 from the top-left. All paths must be absolute; originals are only read; files are never overwritten ' +
         'unless overwrite is true. The engine runs headless with a throwaway library and never touches the LightCraft app or its ' +
-        'library unless live=true. list_lightcraft_catalog lists the controls, presets, profiles and 240 commands.',
+        'library unless live=true. list_lightcraft_catalog lists the controls, presets, profiles and 240 commands.' +
+        ' ' +
+        LINK_INSTRUCTIONS,
     },
   );
   registerDevelopTools(server);
